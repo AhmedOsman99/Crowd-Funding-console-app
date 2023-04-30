@@ -2,6 +2,7 @@ from create import create
 from edit import edit_project
 from delete import delete_project
 from view_projects import view_all_projects, search_projects_by_date
+from donate import donate_to_project
 
 
 def projectList(email):
@@ -12,7 +13,8 @@ def projectList(email):
         print("3. Edit project")
         print("4. Delete project")
         print("5. Search project by date (bonus)")
-        print("6. Exit")
+        print("6. Donate project")
+        print("7. Exit")
         print(2*"=====================")
 
         choice = input("Enter your choice: ")
@@ -28,6 +30,8 @@ def projectList(email):
         elif choice == "5":
             search_projects_by_date()
         elif choice == "6":
+            donate_to_project(email)
+        elif choice == "7":
             break
         else:
             print("Invalid choice. Please try again.")
